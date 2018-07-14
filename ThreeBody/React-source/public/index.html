@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel='manifest' href='%PUBLIC_URL%/manifest.json'>
+    <title>Three-Body Cosmo</title>
+	<script src="https://yo1995.github.io/Daily_Web_Tasks/threebody/jquery-1.12.0.min.js"></script>
+	<script src="https://yo1995.github.io/Daily_Web_Tasks/threebody/jquery.warpdrive.min.js"></script>
+	<script type="text/javascript">
+		function afterloaded() {
+			$('body').addClass('loaded');
+			// 等待所有加载 后去除载入页面 目前最长动画1s
+			setTimeout("$('#loader-wrapper').remove();", 1500);
+			$('#toggle').click();
+			$('#toggle').click();
+		}
+		$(window).load(function(){
+			setTimeout('afterloaded()', 4000);
+		}); 
+	</script>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to peek the universe.
+    </noscript>
+	<div id="holder"></div>
+	<div id="root"></div>
+  </body>
+  
+  
+  <script>
+	$( document ).ready(function () {
+			//------------------------------------------------------------------------
+			//standalone
+			//init
+			// var warpdrive = new WarpDrive( document.getElementById( 'holder' ) );
+			//var warpdrive = new WarpDrive( document.getElementById( 'holder' ), setWarp());
+			//------------------------------------------------------------------------
+			//jQuery
+			//init
+			//$( '#holder' ).warpDrive();
+			$('#holder').warpDrive(setWarp());
+			//warpdrive.pause();
+			//warpdrive.unpause();
+			//------------------------------------------------------------------------
+			$( '#holder' ).warpDrive( 'pause' );
+			$( '.controls-container' ).mouseenter( function() { mouseEnterHandler() } );
+            $( '.controls-container' ).mouseleave( function() { mouseLeaveHandler() } );
+            function mouseEnterHandler( event ) {
+                //warpdrive.unpause();
+                $( '#holder' ).warpDrive('unpause');
+
+            };
+            function mouseLeaveHandler( event ) {
+                //warpdrive.pause();
+                $( '#holder' ).warpDrive( 'pause' );
+            };
+	});
+
+	function setWarp() {
+		//------------------------------------------------------------------------ 
+		//Settings - params for WarpDrive
+		var settings = {
+			width: 600,/*width*/
+			height: 600,/*height*/
+			autoResize: false,/*enable/disable autoResize*/
+			autoResizeMinWidth: null,/*set autoResize min width*/
+			autoResizeMaxWidth: null,/*set autoResize max width*/
+			autoResizeMinHeight: null,/*set autoResize min height*/
+			autoResizeMaxHeight: null,/*set autoResize max height*/
+			addMouseControls: false,/*enable/disable mouse controls*/
+			addTouchControls: false,/*enable/disable touch controls*/
+			hideContextMenu: true,/*enable/disable canvas context menu*/
+			starCount: 600,/*count of active/moving stars*/
+			starBgCount: 2000,/*count of inactive/background stars*/
+			starBgColor: { r:255, g:255, b:255 },/*background stars color*/
+			starBgColorRangeMin: 10,/*background stars color range min of starBgColor*/
+			starBgColorRangeMax: 40,/*background stars color range max of starBgColor*/
+			starColor: { r:255, g:255, b:255 },/*stars color*/
+			starColorRangeMin: 10,/*stars color range min of starBgColor*/
+			starColorRangeMax: 100,/*stars color range max of starBgColor*/
+			starfieldBackgroundColor: { r:0, g:0, b:0 },/*background color*/
+			starDirection: 1,/*stars moving in which direction*/
+			starSpeed: 5,/*stars moving speed*/
+			starSpeedMax: 100,/*stars moving speed max*/
+			starSpeedAnimationDuration: 2,/*time in seconds from starSpeed to starSpeedMax*/
+			starFov: 100,/*field of view*/
+			starFovMin: 80,/*field of view min*/
+			starFovAnimationDuration: 2,/*time in seconds from starFov to starFovMin*/
+			starRotationPermission: false,/*enable/disable rotation*/
+			starRotationDirection: 1,/*rotation direction*/
+			starRotationSpeed: 0.0,/*rotation speed*/
+			starRotationSpeedMax: 1.0,/*rotation speed max*/
+			starRotationAnimationDuration: 2,/*time in seconds from starRotationSpeed to starRotationSpeedMax*/
+			starWarpLineLength: 2.0,/*line length*/
+			starWarpTunnelDiameter: 100,/*tunnel diameter*/
+			starFollowMouseSensitivity: 0.025,/*mouse follow sensitivity*/
+			starFollowMouseXAxis: false,/*enable/disable mouse follow x axis*/
+			starFollowMouseYAxis: false/*enable/disable mouse follow y axis*/
+		};
+		return settings;
+	}
+</script>
+  
+  
+</html>

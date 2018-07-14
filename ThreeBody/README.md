@@ -1,3 +1,6 @@
+
+![](/tblogo.jpg)
+
 [js array 方法总结](http://www.w3school.com.cn/jsref/jsref_obj_array.asp)
 [元素居中](https://www.w3cplus.com/css/elements-horizontally-center-with-css.html)
 [RGB 转换](http://www.atool.org/colorpicker.php)

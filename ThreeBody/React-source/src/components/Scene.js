@@ -4,6 +4,7 @@ import { Vector3 } from 'three'
 import colors from '../utils/colors'
 import TrackballControls from '../utils/trackball'
 //import threeBodyCalc from '../utils/threeBodyCalc'
+//import threeBodyCalc from '../utils/threeBodyCalc3RK45'
 import threeBodyCalc from '../utils/threeBodyCalc2'
 import './Scene.css'
 
@@ -46,7 +47,7 @@ class Scene extends Component {
 		mass: params.m,
 		position: new Vector3(params.x, params.y, params.z),
 		velocity: new Vector3(params.vx, params.vy, params.vz),
-		//momentum: new Vector3(params.vx, params.vy, params.vz).multiplyScalar(params.m)
+		// momentum: new Vector3(params.vx, params.vy, params.vz).multiplyScalar(params.m)
 	  })),
 	  trails: [[], [], []],
 	  zoom,

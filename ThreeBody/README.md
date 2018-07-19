@@ -1,4 +1,4 @@
-![](./tblogo.jpg)
+![logo](./tblogo.jpg)
 
 [click me to preview this App](https://yo1995.github.io/Daily_Web_Tasks/threebody)
 
@@ -46,6 +46,28 @@ note there is a specific path setting in App.js, remove or modify before deploy.
 
 repo里附带一个简单验证“8”字型和等边三角形三体问题的程序，通过手动计算得出其初始笛卡尔坐标与速度。这两种三体问题都是不稳定的。
 
+## Explicit Euler VS Implicit Euler VS Runge Kutta)
+
+在计算物理课程中，曾经简单探究过各类数值积分方法的异同优劣。简单来讲，四阶龙格库塔法的精度最高，欧拉法的实现最简单，隐式欧拉法对于线性运动能够较好地维持其能量守恒。各种方法各有优劣，但当时在求解各类非线性动力学问题时大多采用的是性价比更好、误差相对较小的RK45.这次遇到三体问题，自然想到尝试RK45.得到的结果按顺序如下：
+
+![Explicit Euler](./progress_notes/IntegralMethods/eight-explicit.png)
+
+![Implicit Euler](./progress_notes/IntegralMethods/eight-implicit.png)
+
+![Runge Kutta](./progress_notes/IntegralMethods/eight-RK45.png)
+
+通过观察得知：
+
+- 显式欧拉法在经过一段时间后，系统的能量越来越小，最终“8”字型的三体系统以互相吸引碰撞告终；
+- 隐式欧拉法相对稳定时间较长，但在与显式欧拉法碰撞接近的时间后偏离稳定，三星就此别过；
+- 龙格库塔法可能是我的实现并非完全正确，其稳定时长反而最短，短时间后即偏离原始轨道。当然，还是比最初的向量计算的方法强了不少。同时，由于多了中间求导的步骤，整体运算不如前面二者快。
+
+一直不明白为何three.js的矩阵计算有些问题，似乎数值精度不够？排查了自认为可疑的平方根和标准化函数也没发现问题。看来这个疑惑只能留给后面感兴趣的朋友解决了。
+
+在测试显式欧拉法的时候，三体圆周运动的情况下最终衰变为第三星绕双子星环绕的运动。虽然与原始解相去甚远，但看上去很有意思~
+
+![rolling deep](./progress_notes/IntegralMethods/entanglement.gif)
+
 ## Previews
 
 ![](./progress_notes/20180713181022.png)
@@ -89,6 +111,8 @@ repo里附带一个简单验证“8”字型和等边三角形三体问题的程
 [Three Bodies in Gravitation](http://astro.u-strasbg.fr/~koppen/body/ThreeBodyHelp.html)
 
 [Rhett Allain](https://www.wired.com/2016/06/way-solve-three-body-problem/)
+
+[Numerical Integration Methods](https://gafferongames.com/post/integration_basics/)
 
 ### Example
 

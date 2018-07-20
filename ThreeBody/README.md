@@ -1,4 +1,4 @@
-<center>![logo](./tblogo.jpg)</center>
+![logo](./tblogo.jpg)
 
 [click me to preview this App](https://yo1995.github.io/Daily_Web_Tasks/threebody)
 

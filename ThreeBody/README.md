@@ -1,10 +1,10 @@
-![logo](./tblogo.jpg)
+<center>![logo](./tblogo.jpg)</center>
 
 [click me to preview this App](https://yo1995.github.io/Daily_Web_Tasks/threebody)
 
 ## Description
 
-> *Trisolarans, may the force be with you*
+> **Trisolarans, may the force be with you**
 
 According to the novel *The Three-Body Problem* written by Liu, one of the major problems that besets the civilians on the colonized planet is that there exists 3 stars in their star-system. Proposed by David Hilbert in 1900s, the n-bodies problem is always a spectre that haunted human beings for decades. People finally acknowledged that the three-body problem inevitably leads to chaotic outcome. Therefore, the ultimate fate that confronts the Trisolarans is perpetual perishment.
 
@@ -12,7 +12,7 @@ In order to help their worships, the ETO began to try to figure out analytical s
 
 The author glued snippets of code together to memorize the bygone history of one of the parallel universes. Always keep in mind - 
 
-> *WE ARE ALL BUGS*
+> **WE ARE ALL BUGS**
 
 ## Versions
 

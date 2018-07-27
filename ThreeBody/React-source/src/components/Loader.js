@@ -13,8 +13,8 @@ class Loader extends Component {
 			<div className="load_title">
 				<a href="https://github.com/yo1995/Daily_Web_Tasks/ThreeBody">消灭人类暴政<br/>世界属于三体</a><br/>
 				<small>*请驾驶高速飞船以逃离二向箔</small><br/>
-				<span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span></span>
-				<span id="busuanzi_container_site_uv">UV: <span id="busuanzi_value_site_uv"></span></span>
+				<span id="busuanzi_container_page_pv">PV:  <span id="busuanzi_value_page_pv"></span></span>
+				<span id="busuanzi_container_site_uv">    UV:  <span id="busuanzi_value_site_uv"></span></span>
 			</div>
 		</div>
     )

@@ -336,12 +336,6 @@ function camera_transform( duration ) {
 	var camera_temp = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
 	camera_temp.position.z = 3000;
 	
-	console.log(camera.position);
-	console.log(camera.rotation);
-	
-	console.log(camera_temp.position);
-	console.log(camera_temp.rotation);
-	
 	new TWEEN.Tween( camera.position )
 	  .to( camera_temp.position, duration )
 	  .easing( TWEEN.Easing.Exponential.InOut )

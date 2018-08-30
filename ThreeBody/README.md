@@ -121,4 +121,4 @@ repo里附带一个简单验证“8”字型和等边三角形三体问题的程
 
 ## Keywords
 
-threebody | three-body | 三体 | n-body | three.js | visualization | 
+threebody | three-body | 三体 | n-body | three.js | visualization | 三体模拟器 | 世界属于三体 | 个屁…

@@ -1,0 +1,78 @@
+{
+  "title": "Questionnaire",
+  "type": "object",
+  "required": [
+    "version",
+    "questions"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+	  "title": "Version"
+    },
+    "questions": {
+      "type": "array",
+      "format": "tabs",
+      "title": "Question",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "title": "question",
+        "headerTemplate": "{{ i1 }} - {{ self.title }}",
+        "properties": {
+          "question type": {
+            "type": "string",
+            "enum": [
+              "INSTRUCTION",
+              "SINGLE CHOICE",
+              "MULTIPLE CHOICE",
+              "NUMERIC",
+              "SCALE",
+              "MAP"
+            ],
+            "default": "MULTIPLE CHOICE"
+          },
+          "title": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "choices": {
+            "type": "array",
+            "format": "table",
+            "title": "Choices",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "title": "choice",
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "custom": {
+            "type": "string"
+          },
+		  "optional": {
+            "type": "boolean"
+          }
+        }
+      },
+      "default": [
+        {
+          "question type": "INSTRUCTION",
+          "title": "Q1",
+          "prompt": "BLAH",
+		  "custom": "",
+		  "optional": false
+        }
+      ]
+    }
+  }
+}

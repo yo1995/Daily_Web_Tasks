@@ -16,7 +16,7 @@
     "react-numeric-input": "^2.2.0",
     "react-scripts": "1.0.14",
     "react-three-renderer": "^3.2.1",
-    "three": "^0.87.1"
+    "three": "^0.125.0"
   },
   "scripts": {
     "start": "react-scripts start",
